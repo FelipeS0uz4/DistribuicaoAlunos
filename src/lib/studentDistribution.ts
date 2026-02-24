@@ -143,7 +143,6 @@ export function criarExcelDistribuicao(salas: SalaDistribuida[]): XLSX.WorkBook 
   const wb = XLSX.utils.book_new();
   for (const sala of salas) {
     const data = sala.alunos.map((a, i) => ({
-      "#": i + 1,
       Nome: a.nome,
       Turma: a.turma,
     }));
